@@ -1,0 +1,23 @@
+<h2>Courses</h2>
+<% if (!coursesList.length) { %>
+    <p>No results</p>
+<% } else { %>
+    <table>
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% coursesList.forEach((course) => { %>
+                <tr>
+                    <td><%= course.code %></td>
+                    <td><%= course.name %></td>
+                    <td><%= course.description %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+<% } %>
